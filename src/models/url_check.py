@@ -1,6 +1,6 @@
 """Pydantic models for URL validation and API responses."""
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
@@ -79,12 +79,13 @@ class URLCheckResponse(BaseModel):
         ge=0.0,
     )
     timestamp: datetime = Field(
-        default_factory=lambda: datetime.now(timezone.UTC),
+        default_factory=lambda: datetime.now(UTC),
         description="When the check was performed",
     )
 
     @field_validator("url")
-    def validate_url_format(self, v: str) -> str:
+    @classmethod
+    def validate_url_format(cls, v: str) -> str:
         """Validate URL format."""
         if not v.startswith(("http://", "https://")):
             msg = "URL must start with http:// or https://"
