@@ -19,6 +19,11 @@ MAX_ASCII_VALUE = 127
 class URLValidator:
     """Validates and normalizes URLs for malware checking."""
 
+    # Constants
+    MIN_URL_LENGTH = MIN_URL_LENGTH
+    MAX_URL_LENGTH = MAX_URL_LENGTH
+    VALID_SCHEMES = VALID_SCHEMES
+
     @staticmethod
     def validate(url: str) -> str:
         """Validate a URL and return normalized form.
