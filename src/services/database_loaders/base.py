@@ -2,7 +2,7 @@
 
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 
 @dataclass
@@ -20,7 +20,7 @@ class ThreatInfo:
     def __post_init__(self):
         """Validate and normalize threat data."""
         if self.timestamp is None:
-            self.timestamp = datetime.now(tz=timezone.UTC)
+            self.timestamp = datetime.now(tz=UTC)
 
         if self.is_malicious and self.threat_level == "safe":
             self.threat_level = "medium"
