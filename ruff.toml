@@ -1,0 +1,75 @@
+# Ruff linting and formatting configuration
+# https://docs.astral.sh/ruff/
+
+indent-width = 4
+line-length = 100
+
+[lint]
+# Rule selection: https://docs.astral.sh/ruff/rules/
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # Pyflakes
+    "I",    # isort (import sorting)
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "C4",   # flake8-comprehensions
+    "DTZ",  # flake8-datetimez
+    "EM",   # flake8-errmsg
+    "ISC",  # flake8-implicit-str-concat
+    "PIE",  # flake8-pie
+    "RET",  # flake8-return
+    "SIM",  # flake8-simplify
+    "T10",  # flake8-debugger
+    "ARG",  # flake8-unused-arguments
+    "A",    # flake8-builtins
+    "PL",   # pylint
+    "ASYNC", # flake8-async
+]
+
+ignore = [
+    "E501",  # line too long (handled by formatter)
+    "W191",  # indentation contains tabs
+    "SIM105", # use contextlib.suppress
+]
+
+# Excluded paths
+exclude = [
+    ".git",
+    ".venv",
+    "venv",
+    "__pycache__",
+    "*.pyc",
+    ".pytest_cache",
+    "htmlcov",
+    ".coverage",
+    "build",
+    "dist",
+    "*.egg-info",
+]
+
+[lint.per-file-ignores]
+# Ignore specific rules for test files
+"tests/**" = ["PLR2004", "S101", "ARG001"]
+"conftest.py" = ["ARG001"]
+
+[format]
+# Code formatter settings
+quote-style = "double"
+skip-magic-trailing-comma = false
+
+# Exclude patterns (same as linting)
+exclude = [
+    ".git",
+    ".venv",
+    "venv",
+    "__pycache__",
+    "*.pyc",
+    ".pytest_cache",
+    "htmlcov",
+    ".coverage",
+    "build",
+    "dist",
+    "*.egg-info",
+]
