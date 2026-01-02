@@ -2,11 +2,17 @@
 
 [Ticket_Title](Ticket_Link)
 
-Summary of the changes and the related issue.
+Brief summary of what this PR does and why.
 
 ## Changes
 
-Summary of the changes, how to test them, and dependencies added.
+- Change 1
+- Change 2
+- Change 3
+
+## How to Test
+
+Steps to verify the changes work as expected.
 
 ## Additional Notes
 
@@ -15,7 +21,6 @@ _Add any other context, technical decisions, or information that reviewers shoul
 ---
 
 ## Type of Change
-
 
 - [ ] Bug fix
 - [ ] New feature
@@ -28,6 +33,6 @@ _Add any other context, technical decisions, or information that reviewers shoul
 
 ## Checklist
 
-- [ ] New tests added
-- [ ] Unit tests passed
+- [ ] Test added/updated
+- [ ] All test passing
 - [ ] Documentation updated
