@@ -48,23 +48,6 @@ This project uses dependency groups to keep installations lean and purpose-speci
 | **dev** | Code quality tools | ruff, mypy | Linting and type checking |
 | **commit** | Git hooks | pre-commit | Running pre-commit hooks |
 
-**Quick Reference:**
-
-# Local development (install everything)
-uv sync --all-groups
-
-# Production deployment (main dependencies only)
-uv sync
-
-# CI/CD - Testing
-uv sync --group test
-
-# CI/CD - Code quality checks
-uv sync --group dev
-
-# Setup pre-commit hooks
-uv sync --group commit**Note:** If you're actively developing, use `uv sync --all-groups` to install all dependencies at once. This ensures you can run tests, linting, and the application without switching groups.
-
 # Set up environment
 cp .env.example .env
 ```
