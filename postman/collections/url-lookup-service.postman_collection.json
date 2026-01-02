@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "37f60b22-e646-4330-9258-c3476ff58d0c",
+		"name": "url-lookup-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29994266"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/health",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GitHub",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/urlinfo/1/github.com/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"urlinfo",
+						"1",
+						"github.com",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Malicious",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/urlinfo/1/evil.net:80/trojan",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"urlinfo",
+						"1",
+						"evil.net:80",
+						"trojan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "url_with_port",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/urlinfo/1/example.com:443/path?query=value",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"urlinfo",
+						"1",
+						"example.com:443",
+						"path"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "value"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:8000",
+			"type": "default"
+		}
+	]
+}
