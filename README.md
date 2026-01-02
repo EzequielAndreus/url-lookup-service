@@ -429,10 +429,7 @@ For issues or questions:
 
 ## Roadmap
 
-- [ ] OpenAPI/Swagger documentation (in progress)
-- [ ] Prometheus metrics integration
+- [ ] Dashboard for monitoring metrics
 - [ ] Database failover strategies
 - [ ] URL categorization (phishing, malware, spam)
-- [ ] Machine learning-based URL risk scoring
-- [ ] Webhook notifications for threats
 - [ ] User authentication and API keys
