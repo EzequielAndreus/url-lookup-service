@@ -86,6 +86,30 @@ The API will be available at `http://localhost:8000`
 
 **OpenAPI Docs**: http://localhost:8000/docs
 
+## Testing with Postman
+
+A Postman collection is included in this repository for easy API testing.
+
+### Importing the Collection
+
+1. **Open Postman** (Desktop app or web)
+2. Click **Import** button
+3. Select the file: `postman/collections/url-lookup-service.postman_collection.json`
+4. The collection will appear in your Postman workspace
+
+### Setting Up the Environment
+
+The collection uses a `baseURL` variable that defaults to `http://localhost:8000`. 
+
+### Available Requests
+
+The collection includes the following pre-configured requests:
+
+- **Health**: `GET /health` - Check service health status
+- **GitHub**: `GET /urlinfo/1/github.com/` - Example safe URL check
+- **Malicious**: `GET /urlinfo/1/evil.net:80/trojan` - Example malicious URL check
+- **url_with_port**: `GET /urlinfo/1/example.com:443/path?query=value` - URL with port and query parameters
+
 ## API Endpoints
 
 ### Check URL for Malware
